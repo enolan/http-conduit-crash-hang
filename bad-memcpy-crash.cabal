@@ -17,7 +17,8 @@ executable bad-memcpy-crash
   hs-source-dirs:      app
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
-  build-depends:       base
+  build-depends:       base, bytestring, http-conduit, http-client, network,
+                       warp, wai, http-types
   default-language:    Haskell2010
 
 source-repository head
