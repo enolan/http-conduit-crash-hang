@@ -2,11 +2,18 @@
 # For more information, see: http://docs.haskellstack.org/en/stable/yaml_configuration/
 
 # Specifies the GHC version and set of packages available (e.g., lts-3.5, nightly-2015-09-21, ghc-7.10.2)
-resolver: lts-5.13
+resolver: lts-5.18
 
 # Local packages, usually specified by relative directory name
 packages:
 - '.'
+- location:
+    git: https://github.com/enolan/network.git
+    commit: 82d6264ceec7eaae524fc2b09d2d54a80fd7cbd1
+- location:
+    git: https://github.com/vincenthz/hs-connection.git
+    commit: 27fc1121ebe8a5f45b81f3681aecbc9fc67e5fcc
+
 # Packages to be pulled from upstream that are not in the resolver (e.g., acme-missiles-0.3)
 extra-deps: []
 
